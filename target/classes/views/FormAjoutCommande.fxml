@@ -13,27 +13,27 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exam.test.controllers.FormAjoutCommandeController">
    <children>
-      <AnchorPane prefHeight="85.0" prefWidth="1282.0" style="-fx-background-color: #2577af;">
+      <AnchorPane prefHeight="115.0" prefWidth="1282.0" style="-fx-background-color: #2577af;">
          <children>
-            <TextField fx:id="champ_numero" layoutX="485.0" layoutY="9.0" onKeyReleased="#checkLongueur" prefHeight="67.0" prefWidth="342.0" promptText="Tapez le numéro du client">
+            <TextField fx:id="champ_numero" layoutX="485.0" layoutY="33.0" onKeyReleased="#checkLongueur" prefHeight="67.0" prefWidth="342.0" promptText="Tapez le numéro du client">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </TextField>
-            <TextField fx:id="champ_adresse" alignment="BOTTOM_LEFT" editable="false" layoutX="846.0" layoutY="8.0" prefHeight="67.0" prefWidth="385.0" />
-            <TextField fx:id="champ_name" editable="false" layoutX="29.0" layoutY="8.0" prefHeight="67.0" prefWidth="426.0">
+            <TextField fx:id="champ_adresse" alignment="BOTTOM_LEFT" editable="false" layoutX="846.0" layoutY="32.0" prefHeight="67.0" prefWidth="385.0" />
+            <TextField fx:id="champ_name" editable="false" layoutX="29.0" layoutY="32.0" prefHeight="67.0" prefWidth="426.0">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </TextField>
+            <Label fx:id="label_numero" layoutX="484.0" layoutY="6.0" prefHeight="18.0" prefWidth="341.0" textFill="RED" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="anchor_choix" layoutX="-1.0" layoutY="95.0" prefHeight="610.0" prefWidth="1284.0" style="-fx-background-color: #2577af;">
+      <AnchorPane fx:id="anchor_choix" layoutX="-1.0" layoutY="127.0" prefHeight="578.0" prefWidth="1284.0" style="-fx-background-color: #2577af;">
          <children>
-            <ComboBox fx:id="combo_article" layoutX="187.0" layoutY="33.0" prefHeight="58.0" prefWidth="272.0" promptText="Choisir Article" />
+            <ComboBox fx:id="combo_article" layoutX="187.0" layoutY="33.0" onAction="#remplirChampPrix" prefHeight="58.0" prefWidth="272.0" promptText="Choisir Article" />
             <Spinner fx:id="spinner_quantite" editable="true" layoutX="482.0" layoutY="33.0" prefHeight="58.0" prefWidth="208.0" />
-            <Spinner fx:id="spinner_prix" layoutX="714.0" layoutY="33.0" prefHeight="58.0" prefWidth="208.0" />
-            <Label fx:id="label_quantite" layoutX="481.0" layoutY="1.0" prefHeight="32.0" prefWidth="212.0" text="Quantité" textFill="WHITE">
+            <Label fx:id="label_quantite" layoutX="186.0" layoutY="1.0" prefHeight="32.0" prefWidth="507.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -71,6 +71,7 @@
                   </Label>
                </children>
             </AnchorPane>
+            <TextField fx:id="spinner_prix" layoutX="713.0" layoutY="33.0" prefHeight="58.0" prefWidth="208.0" />
          </children>
       </AnchorPane>
    </children>

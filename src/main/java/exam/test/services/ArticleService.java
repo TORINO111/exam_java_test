@@ -2,6 +2,7 @@ package exam.test.services;
 
 import exam.test.repository.ArticleRepository;
 import exam.test.entities.Article;
+import exam.test.entities.DetailsCommande;
 
 import java.util.List;
 
@@ -30,5 +31,10 @@ public class ArticleService implements Item<Article>{
         return articleRepository.selectAll();
     }
 
-    
+    public void setDetailsCommande(DetailsCommande detailsCommande) {
+        Article article = detailsCommande.getArticle();
+        article.setQteStock(article.getQteStock() - detailsCommande.getQuantite());
+        article.getDetailsCommandes().add(detailsCommande);
+        update(detailsCommande.getArticle());
+    }
 }

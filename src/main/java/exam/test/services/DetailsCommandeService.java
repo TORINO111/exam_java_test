@@ -1,11 +1,10 @@
 package exam.test.services;
 
-import exam.test.repository.DetailsCommandeRepository;
-import exam.test.entities.DetailsCommande;
-
 import java.util.List;
 
 import exam.test.core.Item;
+import exam.test.entities.DetailsCommande;
+import exam.test.repository.DetailsCommandeRepository;
 
 public class DetailsCommandeService implements Item<DetailsCommande> {
 
@@ -32,5 +31,12 @@ public class DetailsCommandeService implements Item<DetailsCommande> {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'listAll'");
     }
-    
+
+    public int montantPanier(List<DetailsCommande> panier) {
+        int total = 0;
+        for (DetailsCommande detailsCommande : panier) {
+            total += detailsCommande.getPrixTotal();
+        }
+        return total;
+    }
 }
